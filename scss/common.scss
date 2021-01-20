@@ -1,0 +1,101 @@
+.container {
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.row {
+	display: flex;
+	margin: 0 -15px;
+}
+[class*="col-"] {
+	padding: 0 15px;
+}
+.flex-sb {
+	justify-content: space-between;
+	align-items: center;
+}
+@for $i from 1 through 12 {
+	.col-xs-#{$i} {
+		flex: 0 0 ($i*(100/12)+0%);
+		max-width: ($i*(100/12)+0%);
+	}
+}
+.flex-wrap {
+	flex-wrap: wrap;
+}
+.block-title1 {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 35px;
+	font-family: Montserrat;
+	color: $grey;
+	text-transform: uppercase;
+}
+.block-title2 {
+	font-family: Montserrat;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 48px;
+	color: $grey;
+	text-transform: uppercase;
+	position: relative;
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		width: 67px;
+		height: 21px;
+		background-color: $green;
+	}
+}
+.block-title3 {
+	font-size: 18px;
+	font-weight: 700;
+	color: $green;
+	font-family: Montserrat;
+}
+.block-title4 {
+	font-size: 14px;
+	font-weight: 700;
+	color: $grey;
+	font-family: Montserrat;
+}
+.block-text {
+	font-size: 16px;
+	line-height: 24px;
+	color: $grey;
+}
+.btn-green, .btn-white {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 48px;
+	background-color: $green;
+	color: $white;
+}
+.btn-white {
+	background-color: $white;
+	color: $green;
+}
+@media (min-width: 992px) {
+	@for $i from 1 through 12 {
+		.col-md-#{$i} {
+			flex: 0 0 ($i*(100/12)+0%);
+			max-width: ($i*(100/12)+0%);
+		}
+	}
+	.hidden-md {
+		display: none;
+	}
+	.block-title1 {
+		font-size: 48px;
+		line-height: 48px;
+	}
+}
+@media (max-width: 991px) {
+	.hidden-xs {
+		display: none;
+	}
+}
