@@ -577,14 +577,21 @@ body {
   padding-bottom: 100px;
 }
 
+.portfolio__cat {
+  text-align: center;
+}
+
 .portfolio__row {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
+  justify-content: center;
 }
 
 .portfolio__card {
   padding: 0 15px;
+  position: relative;
+  overflow: hidden;
 }
 
 .category__title {
@@ -617,34 +624,96 @@ body {
 }
 
 .card {
-  flex: 0 0 33.3333%;
+  flex: 0 0 66.6666666667%;
   height: -webkit-max-content;
   height: max-content;
   margin: 0px 0px 30px 0px;
 }
 
-.card__body {
+.card__bg-image {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  z-index: -2;
+  width: calc(100% - 30px);
+  height: 100%;
+}
+
+.card__bg-image img {
   width: 100%;
+  height: 100%;
+}
+
+.card__body {
+  width: calc(100% - 30px);
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.5s ease-in-out;
 }
 
 .card__link {
-  background-color: #c5c5c5;
   display: block;
   width: 100%;
   height: 100%;
 }
 
+.card__link:hover .card__body {
+  left: 15px;
+}
+
+.card__link:hover .card__title {
+  margin-top: 0;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.card__link:hover .card__text {
+  margin-top: 0;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.card__title {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #60606E;
+  text-transform: uppercase;
+  transition: all 0.5s ease 0.6s;
+  transform: translateY(20px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.card__text {
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #7BEEC7;
+  color: #fff;
+  padding: 5px;
+  transform: translateY(20px);
+  transition: all 0.5s ease 0.8s;
+  opacity: 0;
+  visibility: hidden;
+}
+
 .card-short {
-  height: 171px;
+  padding-bottom: 54.5%;
 }
 
 .card-long {
-  height: 390px;
+  padding-bottom: 138%;
 }
 
 .hide {
@@ -653,6 +722,21 @@ body {
 
 .show {
   display: block;
+}
+
+@media (min-width: 767px) {
+  .portfolio {
+    padding-bottom: 100px;
+  }
+  .portfolio__cat {
+    text-align: center;
+  }
+  .portfolio__row {
+    justify-content: flex-start;
+  }
+  .card {
+    flex: 0 0 50%;
+  }
 }
 
 @media (min-width: 991px) {
@@ -727,5 +811,11 @@ body {
     width: 27px;
     height: 36px;
     margin: 0px 0px 20px;
+  }
+  .portfolio__cat {
+    text-align: left;
+  }
+  .card {
+    flex: 0 0 33.3333%;
   }
 }
