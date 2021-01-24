@@ -43,9 +43,34 @@
 	}
 	.agancy {
 		background: url("../img/agency-bg.jpg") 0 0 no-repeat;
+		background-size: cover;
 		height: 850px;
 		&__body {
-			margin-top: 0;
+			margin-top: -200px;
+		}
+	}
+	.history {
+		margin: -290px 0px 0px 0px;
+		padding: 0;
+	}
+	.choose {
+		padding: 140px 0px 140px 0px;
+		&__subtitle {
+			margin: 20px 0px 86px 0px;
+		}
+		&__image {
+			img {
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	.preference {
+		text-align: left;
+		&__icon {
+			width: 27px;
+			height: 36px;
+			margin: 0px 0px 20px;
 		}
 	}
 }

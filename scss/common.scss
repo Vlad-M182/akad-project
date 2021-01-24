@@ -14,14 +14,18 @@
 	justify-content: space-between;
 	align-items: center;
 }
-@for $i from 1 through 12 {
+@for $i from 6 through 12 {
 	.col-xs-#{$i} {
 		flex: 0 0 ($i*(100/12)+0%);
 		max-width: ($i*(100/12)+0%);
+		margin: 0 auto;
 	}
 }
 .flex-wrap {
 	flex-wrap: wrap;
+}
+.block-center {
+	margin: 0 auto;
 }
 .block-title1 {
 	font-size: 30px;
@@ -54,7 +58,7 @@
 .block-title3 {
 	font-size: 18px;
 	font-weight: 700;
-	color: $green;
+	color: $grey;
 	font-family: Montserrat;
 }
 .block-title4 {
@@ -67,17 +71,47 @@
 	font-size: 16px;
 	line-height: 24px;
 	color: $grey;
+	p {
+		margin-bottom: 10px;
+	}
 }
 .btn-green, .btn-white {
 	font-size: 14px;
 	font-weight: 700;
-	line-height: 48px;
+	line-height: 1;
 	background-color: $green;
 	color: $white;
+	text-transform: uppercase;
+	padding: 1.14em 2.35em;
+	transition: all 0.2s ease-in-out;
+	&:hover {
+		transform: scale(1.01);
+		box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	}
 }
 .btn-white {
 	background-color: $white;
 	color: $green;
+}
+.icon {
+	display: block;
+	width: 27px;
+	height: 36px;
+	& path {
+		color: $grey;
+	}
+	& circle {
+		color: $grey;
+	}
+}
+@media (min-width: 767px) {
+	@for $i from 6 through 12 {
+		.col-sm-#{$i} {
+			flex: 0 0 ($i*(100/12)+0%);
+			max-width: ($i*(100/12)+0%);
+			margin: 0 auto;
+		}
+	}
 }
 @media (min-width: 992px) {
 	@for $i from 1 through 12 {
