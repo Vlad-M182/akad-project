@@ -11,6 +11,42 @@
 	.card {
 		flex: 0 0 50%;
 	}
+	.touch {
+		&__form {
+			input {
+				padding: 0 20px;
+			}
+		}
+	}
+	.footer {
+		&__menu {
+			flex-direction: row;
+			margin: 0px 0px 20px 0px;
+			li:not(:last-child):after {
+				content: "";
+				display: inline-block;
+				width: 5px;
+				height: 1px;
+				background-color: $grey;
+				vertical-align: middle;
+				margin: 0 10px;
+			}
+		}
+		&__menu-link {
+			line-height: 1;
+		}
+		&__text {
+			text-align: left;
+		}
+		&__social {
+			text-align: right;
+			svg {
+				width: 15px;
+				height: 15px;
+				margin: 0 5px;
+			}
+		}
+	}
 }
 @media (min-width: 991px) {
 	.menu {

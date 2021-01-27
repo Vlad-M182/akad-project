@@ -337,7 +337,112 @@ body {
 .show {
 	display: block;
 }
+.touch {
+	background-color: $green;
+	padding: 50px 0;
+
+	&__title {
+		font-size: 30px;
+		color: $white;
+		margin: 0px 0px 20px 0px;
+	}
+
+	&__link {
+		display: inline-block;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 17px;
+		color: $green;
+		text-transform: uppercase;
+		font-family: Montserrat;
+		padding: 1em 1.64em;
+		margin: 0px 0px 20px 0px;
+		background-color: $white;
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			transform: scale(1.01);
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		}
+	}
+
+	&__form {
+		background-color: $white;
+		padding: 20px;
+		input {
+			border: 1px solid rgba(0,0,0,0.1);
+			padding: 0 8px;
+			color: $grey;
+			line-height: 55px;
+			font-size: 12px;
+			font-weight: 700;
+			flex: 0 1 80%;
+			&::placeholder {
+				color: $grey;
+			}
+		}
+		button {
+			flex: 0 1 135px;
+		}
+	}
+
+	&__form-send {
+		display: flex;
+	}
+
+	&__form-title {
+		font-size: 24px;
+		line-height: 36px;
+		margin: 0px 0px 35px 0px;
+	}
+
+	&__form-text {
+		margin: 0px 0px 22px 0px;
+	}
+}
 
 
 
 //===============Footer==================
+.footer {
+	padding: 40px 0 20px 0;
+	color: $grey;
+
+	&__menu {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin: 0px 0px 20px 0px;
+	}
+
+	&__menu-link {
+		color: $grey;
+		text-transform: uppercase;
+		text-decoration: none;
+		line-height: 24px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__text {
+		margin: 0px 0px 20px 0px;
+		line-height: 18px;
+		text-align: center;
+	}
+
+	&__social {
+		text-align: center;
+		svg {
+			width: 20px;
+			height: 20px;
+			margin: 0 10px;
+			&:hover path{
+				fill: $green;
+			}
+			path {
+				fill: $grey;
+				transition: fill 0.2s ease;
+			}
+		}
+	}
+}

@@ -724,6 +724,121 @@ body {
   display: block;
 }
 
+.touch {
+  background-color: #7BEEC7;
+  padding: 50px 0;
+}
+
+.touch__title {
+  font-size: 30px;
+  color: #fff;
+  margin: 0px 0px 20px 0px;
+}
+
+.touch__link {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  color: #7BEEC7;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  padding: 1em 1.64em;
+  margin: 0px 0px 20px 0px;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.touch__link:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.touch__form {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.touch__form input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 8px;
+  color: #60606E;
+  line-height: 55px;
+  font-size: 12px;
+  font-weight: 700;
+  flex: 0 1 80%;
+}
+
+.touch__form input::placeholder {
+  color: #60606E;
+}
+
+.touch__form button {
+  flex: 0 1 135px;
+}
+
+.touch__form-send {
+  display: flex;
+}
+
+.touch__form-title {
+  font-size: 24px;
+  line-height: 36px;
+  margin: 0px 0px 35px 0px;
+}
+
+.touch__form-text {
+  margin: 0px 0px 22px 0px;
+}
+
+.footer {
+  padding: 40px 0 20px 0;
+  color: #60606E;
+}
+
+.footer__menu {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px 0px 20px 0px;
+}
+
+.footer__menu-link {
+  color: #60606E;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 24px;
+}
+
+.footer__menu-link:hover {
+  text-decoration: underline;
+}
+
+.footer__text {
+  margin: 0px 0px 20px 0px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.footer__social {
+  text-align: center;
+}
+
+.footer__social svg {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+}
+
+.footer__social svg:hover path {
+  fill: #7BEEC7;
+}
+
+.footer__social svg path {
+  fill: #60606E;
+  transition: fill 0.2s ease;
+}
+
 @media (min-width: 767px) {
   .portfolio {
     padding-bottom: 100px;
@@ -736,6 +851,36 @@ body {
   }
   .card {
     flex: 0 0 50%;
+  }
+  .touch__form input {
+    padding: 0 20px;
+  }
+  .footer__menu {
+    flex-direction: row;
+    margin: 0px 0px 20px 0px;
+  }
+  .footer__menu li:not(:last-child):after {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 1px;
+    background-color: #60606E;
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+  .footer__menu-link {
+    line-height: 1;
+  }
+  .footer__text {
+    text-align: left;
+  }
+  .footer__social {
+    text-align: right;
+  }
+  .footer__social svg {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
   }
 }
 
