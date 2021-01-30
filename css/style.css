@@ -941,13 +941,13 @@ body {
   text-align: center;
 }
 
-.plans__card {
+.plans__cart {
   border-top: 3px solid #7BEEC7;
   position: relative;
   background-color: #fff;
 }
 
-.plans__card:before {
+.plans__cart:before {
   content: "";
   position: absolute;
   top: 0;
