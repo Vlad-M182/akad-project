@@ -247,6 +247,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (min-width: 767px) {
+  .col-sm-4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+    margin: 0 auto;
+  }
+  .col-sm-5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+    margin: 0 auto;
+  }
   .col-sm-6 {
     flex: 0 0 50%;
     max-width: 50%;
@@ -791,6 +801,216 @@ body {
   margin: 0px 0px 22px 0px;
 }
 
+.services {
+  width: 100%;
+  height: 500px;
+}
+
+.services__body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.services__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.services__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+
+.services__title {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin: 0px 0px 15px 0px;
+}
+
+.services__breadcrumbs {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Montserrat;
+  color: #60606E;
+  text-align: center;
+}
+
+.we-do {
+  padding: 60px 0;
+}
+
+.we-do__title {
+  width: -webkit-max-content;
+  width: max-content;
+}
+
+.we-do__subtitle {
+  margin: 20px 0 26px 0;
+  text-align: center;
+}
+
+.we-do__text {
+  font-size: 14px;
+  margin: 0px 0px 37px 0px;
+}
+
+.we-do__list {
+  margin: 0px 0px 20px 0px;
+}
+
+.we-do__list svg {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #7BEEC7;
+  padding: 2px;
+  margin: 0px 5px 0px 0px;
+  border-radius: 2px;
+}
+
+.we-do__list svg path {
+  fill: #fff;
+}
+
+.we-do__list li {
+  line-height: 30px;
+  font-size: 14px;
+  color: #60606E;
+}
+
+.motivation {
+  text-align: center;
+}
+
+.motivation__title {
+  width: -webkit-max-content;
+  width: max-content;
+  height: 60px;
+}
+
+.motivation__title svg {
+  width: 90px;
+  height: 60px;
+}
+
+.motivation__title svg path:not(.infinity) {
+  fill: #60606E;
+}
+
+.motivation__title svg .infinity {
+  color: #60606E;
+}
+
+.motivation__title:before {
+  bottom: 15px;
+}
+
+.motivation__subtitle {
+  margin: 27px 0 15px 0;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Montserrat;
+  color: #60606E;
+}
+
+.motivation__text {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.plans {
+  padding: 60px 0;
+}
+
+.plans__title {
+  width: -webkit-max-content;
+  width: max-content;
+}
+
+.plans__subtitle {
+  margin: 20px 0px 26px 0px;
+  text-align: center;
+}
+
+.plans__card {
+  border-top: 3px solid #7BEEC7;
+  position: relative;
+  background-color: #fff;
+}
+
+.plans__card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  border: 5px solid transparent;
+  border-top: 5px solid #7BEEC7;
+  border-right: 5px solid #7BEEC7;
+}
+
+.card {
+  padding: 20px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
+  transform: scale(1.01);
+}
+
+.card__plans-title {
+  font-size: 30px;
+  color: #60606E;
+  font-weight: 700;
+  font-family: Montserrat;
+  margin: 0px 0px 15px 0px;
+}
+
+.card__price {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  background-color: #7BEEC7;
+  display: inline-block;
+  padding: 7px 17px;
+  margin: 0px 0px 25px 0px;
+}
+
+.card__list {
+  margin: 0px 0px 36px 0px;
+}
+
+.card__list li {
+  font-size: 14px;
+  line-height: 36px;
+  color: #60606E;
+}
+
+.card__list li svg {
+  width: 15px;
+  height: 15px;
+  background-color: #7BEEC7;
+  padding: 2px;
+  border-radius: 2px;
+  margin: 0px 5px 0px 0px;
+  vertical-align: middle;
+}
+
+.card__list li svg path {
+  fill: #fff;
+}
+
 .footer {
   padding: 40px 0 20px 0;
   color: #60606E;
@@ -962,5 +1182,32 @@ body {
   }
   .card {
     flex: 0 0 33.3333%;
+  }
+  .we-do {
+    padding: 140px 0;
+  }
+  .we-do__subtitle {
+    margin: 20px 0 86px 0;
+  }
+  .we-do__image {
+    width: 100%;
+    height: 100%;
+  }
+  .we-do__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .plans {
+    padding: 140px 0;
+  }
+  .plans__subtitle {
+    margin: 20px 0px 86px 0px;
+  }
+  .card {
+    padding: 20px 30px 40px;
+  }
+  .card__price {
+    margin: 0px 0px 45px 0px;
   }
 }

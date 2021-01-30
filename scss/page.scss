@@ -400,6 +400,183 @@ body {
 	}
 }
 
+//====Services====
+.services {
+	width: 100%;
+	height: 500px;
+	&__body {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+	}
+	&__text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 2;
+		transform: translate(-50%,-50%);
+	}
+	&__title {
+		font-size: 36px;
+		text-transform: uppercase;
+		margin: 0px 0px 15px 0px;
+	}
+	&__breadcrumbs {
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 700;
+		font-family: Montserrat;
+		color: $grey;
+		text-align: center;
+	}
+}
+
+.we-do {
+	padding: 60px 0;
+	&__title {
+		width: max-content;
+	}
+	&__subtitle {
+		margin: 20px 0 26px 0;
+		text-align: center;
+	}
+	&__text {
+		font-size: 14px;
+		margin: 0px 0px 37px 0px;
+	}
+	&__list {
+		margin: 0px 0px 20px 0px;
+		svg {
+			display: inline-block;
+			width: 15px;
+			height: 15px;
+			background-color: $green;
+			padding: 2px;
+			margin: 0px 5px 0px 0px;
+			border-radius: 2px;
+			path {
+				fill: $white;
+			}
+		}
+		li {
+			line-height: 30px;
+			font-size: 14px;
+			color: $grey;
+		}
+	}
+}
+
+.motivation {
+	text-align: center;
+	&__title {
+		width: max-content;
+		height: 60px;
+		svg {
+			width: 90px;
+			height: 60px;
+			path:not(.infinity) {
+				fill: $grey;
+			}
+			.infinity {
+				color: $grey;
+			}
+		}
+		&:before {
+			bottom: 15px;
+		}
+	}
+	&__subtitle {
+		margin: 27px 0 15px 0;
+		font-size: 18px;
+		font-weight: 700;
+		font-family: Montserrat;
+		color: $grey;
+	}
+	&__text {
+		font-size: 14px;
+		line-height: 30px;
+	}
+}
+
+.plans {
+	padding: 60px 0;
+	&__title {
+		width: max-content;
+	}
+	&__subtitle {
+		margin: 20px 0px 26px 0px;
+		text-align: center;
+	}
+	&__card {
+		border-top: 3px solid $green;
+		position: relative;
+		background-color: $white;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 2;
+			border: 5px solid transparent;
+			border-top: 5px solid $green;
+			border-right: 5px solid $green;
+		}
+	}
+}
+.card {
+	padding: 20px 15px;
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		box-shadow: 0 0 50px rgba(0,0,0,0.25);
+		transform: scale(1.01);
+	}
+	&__plans-title {
+		font-size: 30px;
+		color: $grey;
+		font-weight: 700;
+		font-family: Montserrat;
+		margin: 0px 0px 15px 0px;
+	}
+	&__price {
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $white;
+		background-color: $green;
+		display: inline-block;
+		padding: 7px 17px;
+		margin: 0px 0px 25px 0px;
+	}
+	&__list {
+		margin: 0px 0px 36px 0px;
+		li {
+			font-size: 14px;
+			line-height: 36px;
+			color: $grey;
+			svg {
+				width: 15px;
+				height: 15px;
+				background-color: $green;
+				padding: 2px;
+				border-radius: 2px;
+				margin: 0px 5px 0px 0px;
+				vertical-align: middle;
+				path {
+					fill: $white;
+				}
+			}
+		}
+	}
+}
+
 
 
 //===============Footer==================

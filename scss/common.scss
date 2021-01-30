@@ -105,7 +105,7 @@
 	}
 }
 @media (min-width: 767px) {
-	@for $i from 6 through 12 {
+	@for $i from 4 through 12 {
 		.col-sm-#{$i} {
 			flex: 0 0 ($i*(100/12)+0%);
 			max-width: ($i*(100/12)+0%);
