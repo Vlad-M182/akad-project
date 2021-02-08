@@ -241,9 +241,9 @@
 			<div class="row flex-wrap">
 				<div class="col-xs-11 col-sm-6 col-md-4">
 					<div class="plans__cart cart">
-						<h2 class="bloc-title3 cart__plans-title">Basic</h2>
+						<h2 class="block-title3 cart__plans-title">Basic</h2>
 						<p class="cart__price">
-							$35.99 MONTHLY
+							<span class="cart__price-text">$35.99</span> MONTHLY
 						</p>
 						<ul class="cart__list">
 							<li>
@@ -288,9 +288,9 @@
 				</div>
 				<div class="col-xs-11 col-sm-6 col-md-4">
 					<div class="plans__cart cart">
-						<h2 class="bloc-title3 cart__plans-title">Advanced</h2>
+						<h2 class="block-title3 cart__plans-title">Advanced</h2>
 						<p class="cart__price">
-							$55.99 MONTHLY
+							<span class="cart__price-text">$55.99</span> MONTHLY
 						</p>
 						<ul class="cart__list">
 							<li>
@@ -335,9 +335,9 @@
 				</div>
 				<div class="col-xs-11 col-sm-6 col-md-4">
 					<div class="plans__cart cart">
-						<h2 class="bloc-title3 cart__plans-title">Smart</h2>
+						<h2 class="block-title3 cart__plans-title">Smart</h2>
 						<p class="cart__price">
-							$75.99 MONTHLY
+							<span class="cart__price-text">$75.99</span> MONTHLY
 						</p>
 						<ul class="cart__list">
 							<li>
@@ -506,7 +506,23 @@
 	</div>
 </footer>
 
+<div class="modal hide">
+	<span class="close-modal"></span>
+	<div class="plans__cart modal-cart">
+		<h2 class="block-title3 cart__plans-title modal__cart-title"></h2>
+		<p class="cart__price">
+			<span class="modal__cart-text"></span> MONTHLY
+		</p>
+		<form action="/">
+			<input type="text" placeholder="YOUR NAME" value="">
+			<input type="email" placeholder="EMAIL" value="">
+			<button class="btn-green modal-cart__button" type="button">SEND REQUEST</button>
+		</form>
+	</div>
+</div>
+
 <script src="js/app.js"></script>
+<script src="js/modal.js"></script>
 	
 </body>
 </html>
